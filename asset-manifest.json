@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pagination-filtering-sorting/static/css/main.e6c13ad2.css",
+    "main.js": "/pagination-filtering-sorting/static/js/main.0462da27.js",
+    "index.html": "/pagination-filtering-sorting/index.html",
+    "main.e6c13ad2.css.map": "/pagination-filtering-sorting/static/css/main.e6c13ad2.css.map",
+    "main.0462da27.js.map": "/pagination-filtering-sorting/static/js/main.0462da27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.0462da27.js"
+  ]
+}
