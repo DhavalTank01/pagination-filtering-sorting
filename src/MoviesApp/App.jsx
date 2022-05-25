@@ -10,7 +10,7 @@ import DropDown from "../Components/DropDown";
 import ListGroup from "../Components/ListGroup";
 import { getGenres } from "../services/fakeGenreService";
 import MoviesTabel from "./MoviesTabel";
-
+import "../css/style.scss";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState([]);
@@ -88,12 +88,9 @@ const App = () => {
     [movies]
   );
 
-  const handelPageChange = useCallback(
-    (page) => {
-      setCurrentPage(page);
-    },
-    []
-  );
+  const handelPageChange = useCallback((page) => {
+    setCurrentPage(page);
+  }, []);
 
   const filtered =
     "All" === currentGenres
@@ -104,26 +101,17 @@ const App = () => {
 
   const moviesList = pagenate(sorted, currentPage, pageSize);
 
-  const handelShowRows = useCallback(
-    (val) => {
-      setPageSize(val);
-    },
-    []
-  );
+  const handelShowRows = useCallback((val) => {
+    setPageSize(val);
+  }, []);
 
-  const handelChangeGenres = useCallback(
-    (val) => {
-      setCurrentGenres(val);
-    },
-    []
-  );
+  const handelChangeGenres = useCallback((val) => {
+    setCurrentGenres(val);
+  }, []);
 
-  const handelSort = useCallback(
-    (path, order) => {
-      setColumns({ path, order });
-    },
-    []
-  );
+  const handelSort = useCallback((path, order) => {
+    setColumns({ path, order });
+  }, []);
 
   return (
     <>
@@ -145,15 +133,15 @@ const App = () => {
               title={`showing ${moviesList.length} movies out of ${filtered.length}`}
             />
             <DropDown onChange={handelShowRows} pageSize={pageSize} />
-            <div className="row">
-              <div className="col-2 mt-3">
+            <div className="row table-box">
+              <div className="col mt-3 box-1">
                 <ListGroup
                   currentGenres={currentGenres}
                   OnClick={handelChangeGenres}
                   items={genres}
                 />
               </div>
-              <div className="col">
+              <div className="col box-2">
                 {moviesList.length === 0 ? (
                   <p className="h3 text-capitalize mt-3">
                     there are no movies of {currentGenres} genres

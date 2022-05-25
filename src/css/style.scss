@@ -4,3 +4,18 @@
   right: 10px;
   top: 600px;
 }
+
+@media screen and (max-width: 500px) {
+  .table-box {
+    .box-1 {
+      max-width: 100% !important;
+    }
+  }
+}
+@media screen and (min-width: 500px) {
+  .table-box {
+    .box-1 {
+      max-width: 20% !important;
+    }
+  }
+}
